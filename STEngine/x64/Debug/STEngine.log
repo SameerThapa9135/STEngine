@@ -1,6 +1,8 @@
-﻿  GraphicsEngine.cpp
+﻿  Source.cpp
+  Game.cpp
+  GraphicsEngine.cpp
   VertexArrayObject.cpp
-C:\Users\thapa\OneDrive\Documents\3DApps\STEngine\STEngine\source\STEngine\Graphics\VertexArrayObject.cpp(90,2): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+C:\Users\thapa\OneDrive\Documents\3DApps\STEngine\STEngine\source\STEngine\Graphics\VertexArrayObject.cpp(114,2): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
   Generating Code...
   STEngine.vcxproj -> C:\Users\thapa\OneDrive\Documents\3DApps\STEngine\x64\Debug\STEngine.exe
   C:\Users\thapa\OneDrive\Documents\3DApps\STEngine\STEngine\lib\glew32.dll

@@ -27,3 +27,10 @@ struct ShapeData {
 	vector<float> PositionMatrix;
 	vector<stuint> IndicesMatrix;
 };
+
+//a list of the grometric shapes available in the VAO
+enum class GeometricShapes {
+	Triangle = 0,
+	Polygon, 
+	MyShape
+};

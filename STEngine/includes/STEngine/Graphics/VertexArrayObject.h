@@ -23,29 +23,29 @@ const PositionMatrix PolyPositions{
 };
 
 const IndicesMatrix PolyIndices{
-	0, 3, 2,//triangle 1
-	0, 2, 1			//triangle 2
+	0, 3, 2, //triangle 1
+	0, 2, 1	//triangle 2
 };
 
 
-const PositionMatrix CirclePositions{
+const PositionMatrix MyShapePositions{
 	// X     Y     Z
 	0.0f, 0.5f, 0.0f, 
-	 0.1f, 0.4f, 0.0f,	
+	 0.1f, 0.9f, 0.0f,	
 	 0.2f, 0.3f, 0.0f,
 	 0.0f, 0.0f, 0.0f,	
 	
 };
 
-const IndicesMatrix CircleIndices{
-	0, 1, 2,		//triangle 1
-	//0, 2, 1			//triangle 2
+const IndicesMatrix MyShapeIndices{
+	0, 1, 3,		//triangle 1
+	0, 2, 3		//triangle 2
 };
 
 
 class VertexArrayObject {
 public:
-	VertexArrayObject();
+	VertexArrayObject(GeometricShapes ChosenShape);
 	~VertexArrayObject();
 
 	void Draw();

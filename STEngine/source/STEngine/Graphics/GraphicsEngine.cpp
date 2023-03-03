@@ -1,6 +1,7 @@
 #include"STEngine/Graphics/GraphicsEngine.h"
 #include "GL/glew.h"
 #include "STEngine/Graphics/VertexArrayObject.h"
+#include "STEngine/CoreMinimal.h"
 
 using namespace std;
 
@@ -123,7 +124,7 @@ SDL_Window* GraphicsEngine::GetWindow() const
 void GraphicsEngine::CreateVAO()
 {
 	//Create a new VAO as a shared pointer
-	VAOPtr NewVAO = make_shared<VAO>();
+	VAOPtr NewVAO = make_shared<VAO>(GeometricShapes::MyShape);
 
 	//Add it to the stack
 	VAOs.push_back(NewVAO);

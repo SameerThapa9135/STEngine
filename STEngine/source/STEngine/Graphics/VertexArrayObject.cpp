@@ -2,14 +2,38 @@
 #include "GL/glew.h"
 
 
-VertexArrayObject::VertexArrayObject()
+VertexArrayObject::VertexArrayObject(GeometricShapes ChosenShape)
 {
 	ID = EAB = VAB = 0;
 
+	//Localized version of the chosen matrices
+	PositionMatrix ChosenPosition = PositionMatrix();
+	IndicesMatrix ChosenIndices = IndicesMatrix();
+	
+	switch (ChosenShape) {
+	case GeometricShapes::Triangle:
+		ChosenPosition = TrianglePositions;
+		ChosenIndices = TriangleIndices;
+		break;
+
+	case GeometricShapes::Polygon:
+		ChosenPosition = PolyPositions;
+		ChosenIndices = PolyIndices;
+		break;
+
+	case GeometricShapes::MyShape:
+		ChosenPosition = MyShapePositions;
+		ChosenIndices = MyShapeIndices;
+		break;
+
+	default:
+		break;
+	}
+
+	Shape.PositionMatrix = ChosenPosition;
+	Shape.IndicesMatrix = ChosenIndices;
 
 	
-	Shape.PositionMatrix = CirclePositions;
-	Shape.IndicesMatrix = CircleIndices;
 	// Handle the positions
 	
 	//create the ID for our VAO
